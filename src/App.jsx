@@ -129,19 +129,20 @@ const piProfile = {
     "Secretary, Chinese Society for Extracellular Vesicles",
   ],
 };
-
 const team = [
   {
     name: "石芷鸢 / Zhiyuan Shi",
     role: "PhD Student",
-    note: "BSc: Huazhong Agricultural University · 
-      MSc: Sun Yat-sen University",
+    note: [
+      "BSc: Huazhong Agricultural University",
+      "MSc: Sun Yat-sen University",
+    ],
     photo: `${import.meta.env.BASE_URL}images/zhiyuan-shi.jpg`,
   },
   {
     name: "胡凝语 / Ningyu Hu",
     role: "Master’s Student",
-    note: "BSc: Jinan University",
+    note: ["BSc: Jinan University"],
     photo: `${import.meta.env.BASE_URL}images/ningyu-hu.jpg`,
   },
 ];
@@ -704,7 +705,13 @@ export default function App() {
                   />
                   <h3 className="text-xl font-semibold leading-snug">{person.name}</h3>
                   <p className="mt-1 text-sm font-medium text-blue-700">{person.role}</p>
-                  <p className="mt-4 text-sm leading-6 text-slate-600">{person.note}</p>
+                  <div className="mt-4 space-y-1 text-sm leading-6 text-slate-600">
+  {Array.isArray(person.note) ? (
+    person.note.map((item) => <p key={item}>{item}</p>)
+  ) : (
+    <p>{person.note}</p>
+  )}
+</div>
                 </CardContent>
               </Card>
             ))}
