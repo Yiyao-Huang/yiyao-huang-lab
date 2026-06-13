@@ -571,58 +571,74 @@ export default function App() {
           </div>
         </section>
 
-        <section id="research" className="bg-white py-20">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mb-10 flex items-end justify-between gap-6">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
-                  Research
-                </p>
-                <h2 className="mt-3 text-4xl font-semibold tracking-tight">
-                  Research directions
-                </h2>
+     <section id="research" className="bg-white py-20">
+  <div className="mx-auto max-w-7xl px-6">
+    <div className="mb-10 flex items-end justify-between gap-6">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
+          Research
+        </p>
+        <h2 className="mt-3 text-4xl font-semibold tracking-tight">
+          Research directions
+        </h2>
+      </div>
+      <p className="hidden max-w-md text-sm leading-6 text-slate-600 md:block">
+        We prioritize questions where EV biology can provide source information,
+        mechanistic insight, and clinically relevant readouts.
+      </p>
+    </div>
+
+    <div className="grid gap-6 md:grid-cols-2">
+      {researchAreas.map((area, index) => {
+        const accents = [
+          {
+            icon: "bg-violet-100 text-violet-700",
+            number: "text-violet-700",
+          },
+          {
+            icon: "bg-cyan-100 text-cyan-700",
+            number: "text-cyan-700",
+          },
+          {
+            icon: "bg-emerald-100 text-emerald-700",
+            number: "text-emerald-700",
+          },
+          {
+            icon: "bg-rose-100 text-rose-700",
+            number: "text-rose-700",
+          },
+        ];
+
+        const accent = accents[index] || accents[0];
+
+        return (
+          <Card
+            key={area.title}
+            className="rounded-3xl border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          >
+            <CardContent className="p-8">
+              <div
+                className={`mb-6 grid h-14 w-14 place-items-center rounded-2xl ${accent.icon}`}
+              >
+                <ResearchIcon index={index} />
               </div>
-              <p className="hidden max-w-md text-sm leading-6 text-slate-600 md:block">
-                We prioritize questions where EV biology can provide source
-                information, mechanistic insight, and clinically relevant
-                readouts.
+
+              <p className={`mb-3 text-sm font-semibold ${accent.number}`}>
+                0{index + 1}
               </p>
-            </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              {researchAreas.map((area, index) => {
-                const style = researchStyles[index] || researchStyles[0];
+              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
+                {area.title}
+              </h3>
 
-                return (
-                  <Card
-                    key={area.title}
-                    className={`rounded-3xl shadow-sm transition hover:-translate-y-1 hover:shadow-md ${style.card}`}
-                  >
-                    <CardContent className="p-6">
-                      <ResearchHeaderVisual index={index} />
-                      <div
-                        className={`mb-4 grid h-12 w-12 place-items-center rounded-2xl ${style.icon}`}
-                      >
-                        <ResearchIcon index={index} />
-                      </div>
-                      <p
-                        className={`mb-2 text-sm font-semibold ${style.label}`}
-                      >
-                        0{index + 1}
-                      </p>
-                      <h3 className="text-2xl font-semibold tracking-tight">
-                        {area.title}
-                      </h3>
-                      <p className="mt-4 leading-7 text-slate-600">
-                        {area.text}
-                      </p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+              <p className="mt-5 leading-7 text-slate-600">{area.text}</p>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
         <section id="people" className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-10">
