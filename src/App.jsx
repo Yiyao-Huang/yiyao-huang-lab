@@ -406,7 +406,7 @@ export default function App() {
               Yiyao Huang Lab
             </p>
             <p className="text-xs uppercase tracking-[0.25em] text-slate-500">
-              Extracellular Vesicles · Liquid Biopsy · NDDs · HIV
+              Extracellular Vesicles · Liquid Biopsy
             </p>
           </div>
           <nav className="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
@@ -440,14 +440,8 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-blue-100">
-              <Sparkles className="h-4 w-4" />
-              Extracellular vesicles, liquid biopsy, neurodegenerative diseases,
-              and HIV
-            </div>
             <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-tight md:text-4xl lg:text-5xl">
-              Decoding extracellular vesicle signals for liquid biopsy in
-              neurodegenerative diseases and HIV
+              Decoding extracellular vesicle signals for liquid biopsy in diseases
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
               We study extracellular vesicles as a dynamic information layer
@@ -578,10 +572,6 @@ export default function App() {
           Research directions
         </h2>
       </div>
-      <p className="hidden max-w-md text-sm leading-6 text-slate-600 md:block">
-        We prioritize questions where EV biology can provide source information,
-        mechanistic insight, and clinically relevant readouts.
-      </p>
     </div>
 
     <div className="grid gap-6 md:grid-cols-2">
