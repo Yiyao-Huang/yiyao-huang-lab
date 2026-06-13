@@ -97,9 +97,7 @@ const publications = [
     authors:
       "Huang, Y.; Abdelgawad, A.; Turchinovich, A.; Queen, S.; Abreu, C. M.; Zhu, X.; Batish, M.; Zheng, L.; Witwer, K. W.",
     citation: "The Journal of Infectious Diseases, 2024, 229(5): 1295–1305",
-    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095537
-        
-        /",
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095537/",
   },
   {
     journal: "Interdisciplinary Medicine",
@@ -109,9 +107,7 @@ const publications = [
     authors:
       "Huang, Y.*; Arab, T.*; Russell, A. E.; Mallick, E. R.; Nagaraj, R.; Gizzie, E.; Redding, J.; Troncoso, J. C.; Pletniková, O.; Turchinovich, A.; Routenberg, D. A.; Witwer, K. W.",
     citation: "Interdisciplinary Medicine, 2023, 1(4), e20230016",
-    url: "https://onlinelibrary.wiley.com/doi/10.1002/inmd.20230016
-        
-        ",
+    url: "https://onlinelibrary.wiley.com/doi/10.1002/inmd.20230016",
   },
 ];
 
